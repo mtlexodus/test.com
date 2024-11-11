@@ -1,0 +1,9 @@
+
+
+<img src="img/save-solid.svg" width="20px" height="20px">
+<img src="img/download-solid.svg" width="20px" height="20px">
+
+<img src="img/desktop-solid.svg" width="20px" height="20px">
+<img src="img/tablet-solid.svg" width="20px" height="20px">
+<img src="img/mobile-solid.svg" width="20px" height="20px">
+
