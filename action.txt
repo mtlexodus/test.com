@@ -1,0 +1,13 @@
+0: <button id="toggle-file-manager-btn" class="btn btn-light active" title="Toggle file manager" data-vvveb-action="toggleFileManager" data-toggle="button" aria-pressed="true">?
+1: <button id="toggle-left-column-btn" class="btn btn-light active" title="Toggle left column" data-vvveb-action="toggleLeftColumn" data-toggle="button" aria-pressed="true">?
+2: <button id="toggle-right-column-btn" class="btn btn-light" title="Toggle right column" data-vvveb-action="toggleRightColumn" data-toggle="button" aria-pressed="false">?
+3: <button id="undo-btn" class="btn btn-light" title="Undo (Ctrl/Cmd + Z)" data-vvveb-action="undo" data-vvveb-shortcut="ctrl+z">?
+4: <button id="redo-btn" class="btn btn-light" title="Redo (Ctrl/Cmd + Shift + Z)" data-vvveb-action="redo" data-vvveb-shortcut="ctrl+shift+z">?
+5: <button id="designer-mode-btn" class="btn btn-light" title="Designer Mode (Free component dragging)" data-toggle="button" aria-pressed="false" data-vvveb-action="setDesignerMode">?
+6: <button id="preview-btn" class="btn btn-light" title="Preview" type="button" data-toggle="button" aria-pressed="false" data-vvveb-action="preview">?
+7: <button id="fullscreen-btn" class="btn btn-light" title="Fullscreen (F11)" data-toggle="button" aria-pressed="false" data-vvveb-action="fullscreen">?
+8: <button id="save-btn" class="btn btn-light" title="Export (Ctrl + E)" data-vvveb-action="saveAjax" data-vvveb-shortcut="ctrl+e">?
+9: <button id="download-btn" class="btn btn-light" title="Download" data-vvveb-action="download" data-download="index.html">?
+10: <button id="mobile-view" class="btn btn-light" data-view="mobile" title="Mobile view" data-vvveb-action="viewport">?
+11: <button id="tablet-view" class="btn btn-light" data-view="tablet" title="Tablet view" data-vvveb-action="viewport">?
+12: <button id="desktop-view" class="btn btn-light" data-view="" title="Desktop view" data-vvveb-action="viewport">

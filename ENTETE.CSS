@@ -1,0 +1,26 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, -apple-system, Arial,
+    "Lucida Grande", system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+#logo {
+  margin-left: 0.5rem;
+  margin-top: 0.15rem;
+}
+
+#mabo-builder #top-panel {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+#mabo-builder #top-panel .btn-group .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+}
+#mabo-builder #top-panel .btn-group.responsive-btns .btn {
+  font-size: 1.6rem;
+  padding: 0rem 0.5rem;
+}

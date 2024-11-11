@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>ENTETE.HTML</title>
+	<link href="Boots.css" rel="stylesheet">
+	<link href="ENTETE.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Raleway:wght@300&family=Roboto:ital,wght@0,300;1,400&display=swap"
+		rel="stylesheet">
+
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+</head>
+<style>
+	* {
+		font-size: 100%;
+		font-family: roboto;
+	}
+
+
+	#DivToast {
+		visibility: hidden;
+		min-width: 250px;
+		margin-left: -125px;
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		border-radius: 2px;
+		padding: 16px;
+		position: fixed;
+		z-index: 1;
+		left: 50%;
+		bottom: 30px;
+		font-size: 17px;
+	}
+
+	#DivToast.show {
+		visibility: visible;
+		-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+		animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+
+	@-webkit-keyframes fadein {
+		from {
+			bottom: 0;
+			opacity: 0;
+		}
+
+		to {
+			bottom: 30px;
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadein {
+		from {
+			bottom: 0;
+			opacity: 0;
+		}
+
+		to {
+			bottom: 30px;
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadeout {
+		from {
+			bottom: 30px;
+			opacity: 1;
+		}
+
+		to {
+			bottom: 0;
+			opacity: 0;
+		}
+	}
+
+	@keyframes fadeout {
+		from {
+			bottom: 30px;
+			opacity: 1;
+		}
+
+		to {
+			bottom: 0;
+			opacity: 0;
+		}
+	}
+</style>
+
+<body>
+	<div id="mabo-builder">
+		<!-- ----------------------------------------------------------------------- -->
+		<!--                                 entete                                  -->
+		<!-- ----------------------------------------------------------------------- -->
+		<div id="top-panel">
+			<img src="img/logo.png" alt="mabo" class="float-left" id="logo">
+
+			<!-- ----------------------------------------------------------------------- -->
+			<!--                           Zone Toggle Panneau                           -->
+			<!-- ----------------------------------------------------------------------- -->
+			<div class="btn-group float-left" role="group">
+				<!-- ------------------------- Toggle Gauche Haut -------------------------- -->
+
+				<!--
+				<button
+					class="btn btn-light"
+					<title="Toggle file manager"
+					id="toggle-file-manager-btn"
+					data-mabo-action="toggleFileManager"
+					data-toggle="button"
+					aria-pressed="false">
+					<img src="img/file-manager-layout.svg" width="20px" height="20px">
+				</button>
+				-->
+				<button class="btn btn-light" title="Toggle file manager" id="toggle-file-manager-btn"
+					data-mabo-action="toggleFileManager" data-toggle="button" aria-pressed="false">
+					<img src="img/file-manager-layout.svg" width="20px" height="20px">
+				</button>
+				<!-- ---------------------------- Toggle Gauche ---------------------------- -->
+				<button class="btn btn-light" title="Toggle left column" id="toggle-left-column-btn"
+					data-mabo-action="toggleLeftColumn" data-toggle="button" aria-pressed="false">
+					<img src="img/left-column-layout.svg" width="20px" height="20px">
+				</button>
+				<!-- ---------------------------- Toggle Droit ----------------------------- -->
+				<button class="btn btn-light" title="Toggle right column" id="toggle-right-column-btn"
+					data-mabo-action="toggleRightColumn" data-toggle="button" aria-pressed="false">
+					<img src="img/
+
+					right-column-layout.svg" width="20px" height="20px">
+				</button>
+			</div>
+			<!-- ----------------------------------------------------------------------- -->
+			<!--                      Zone Action Refaire & Defaire                      -->
+			<!-- ----------------------------------------------------------------------- -->
+			<div class="btn-group mr-3" role="group">
+				<!-- --------------------------- Action Defaire ---------------------------- -->
+				<button class="btn btn-light" title="Undo (Ctrl/Cmd + Z)" id="undo-btn" data-mabo-action="undo"
+					data-mabo-shortcut="ctrl+z">
+					<!-- --------------------- <i class="la la-undo"></i> ---------------------- -->
+					<img src="img/undo-solid.svg" width="20px" height="20px">
+				</button>
+				<!-- --------------------------- Action Refaire ---------------------------- -->
+				<button class="btn btn-light" title="Redo (Ctrl/Cmd + Shift + Z)" id="redo-btn" data-mabo-action="redo"
+					data-mabo-shortcut="ctrl+shift+z">
+					<!-- ------------ <i class="la la-undo la-flip-horizontal"></i> ------------ -->
+					<img src="img/redo-solid.svg" width="20px" height="20px">
+				</button>
+			</div>
+			<!-- ----------------------------------------------------------------------- -->
+			<!--                           Zone Action Edition                           -->
+			<!-- ----------------------------------------------------------------------- -->
+			<div class="btn-group mr-3" role="group">
+
+				<!-- ------------------------- Action Mode Design -------------------------- -->
+				<button class="btn btn-light" title="Designer Mode (Free component dragging)" id="designer-mode-btn"
+					data-toggle="button" aria-pressed="false" data-mabo-action="setDesignerMode">
+					<img src="img/hand-paper.svg" width="20px" height="20px">
+				</button>
+
+				<!-- --------------------------- Action Preview ---------------------------- -->
+				<button class="btn btn-light" title="Preview" id="preview-btn" type="button" data-toggle="button"
+					aria-pressed="false" data-mabo-action="preview">
+					<img src="img/eye.svg" width="20px" height="20px">
+				</button>
+
+				<!-- ------------------------- Action Pleine Ecran ------------------------- -->
+				<button class="btn btn-light" title="Fullscreen (F11)" id="fullscreen-btn" data-toggle="button"
+					aria-pressed="false" data-mabo-action="fullscreen">
+					<img src="img/expand-arrows-alt-solid.svg" width="20px" height="20px">
+				</button>
+			</div>
+			<!-- ----------------------------------------------------------------------- -->
+			<!--                          Zone de la Sauvegarde                          -->
+			<!-- ----------------------------------------------------------------------- -->
+			<div class="btn-group mr-3" role="group">
+
+				<!-- ----------------------------- Exportation ----------------------------- -->
+				<button class="btn btn-light" title="Export (Ctrl + E)" id="save-btn" data-mabo-action="saveAjax"
+					data-mabo-shortcut="ctrl+e">
+					<img src="img/save-solid.svg" width="20px" height="20px">
+				</button>
+
+				<!-- ------------------------------ Download ------------------------------- -->
+				<button class="btn btn-light" title="Download" id="download-btn" data-mabo-action="download"
+					data-download="index.html">
+					<img src="img/download-solid.svg" width="20px" height="20px">
+				</button>
+			</div>
+
+			<!-- ----------------------------------------------------------------------- -->
+			<!--                      Format de la zone D'affichage                      -->
+			<!-- ----------------------------------------------------------------------- -->
+
+			<div class="btn-group float-right responsive-btns" role="group">
+				<!-- ---------------------------- Format Mobile ---------------------------- -->
+				<button id="mobile-view" data-view="mobile" class="btn btn-light" title="Mobile view"
+					data-mabo-action="viewportMobile">
+					<img src="img/mobile-solid.svg" width="20px" height="20px">
+
+				</button>
+				<!-- --------------------------- Format Tablette --------------------------- -->
+				<button id="tablet-view" data-view="tablet" class="btn btn-light" title="Tablet view"
+					data-mabo-action="viewportTablet">
+					<img src="img/tablet-solid.svg" width="20px" height="20px">
+
+				</button>
+				<!-- ---------------------------- Format Bureau ---------------------------- -->
+				<button id="desktop-view" data-view="" class="btn btn-light" title="Desktop view"
+					data-mabo-action="viewportDesktop">
+					<img src="img/desktop-solid.svg" width="20px" height="20px">
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- -------------------------- Div pour le Toast -------------------------- -->
+	<div id="DivToast">Some text some message..</div>
+
+	<!-- ----------------------------------------------------------------------- -->
+	<!--                                 Script                                  -->
+	<!-- ----------------------------------------------------------------------- -->
+
+	<!-- jquery-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.hotkeys.js"></script>
+
+	<!-- bootstrap-->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- ----------------------------- Script Gui ------------------------------ -->
+	<script src="ObjClass.js"></script>
+
+	<!-- --------------------- Script Initialisation Objet --------------------- -->
+	<script>
+		
+		function Toast_Alert(myText) {
+			var x = document.getElementById("DivToast");
+			x.textContent = myText;
+			x.className = "show";
+			setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+		}
+
+		$(document).ready(function () {
+			<!-- -------------------------- mabo.Gui.init(); --------------------------- -->
+			<!-- ------------------------- console.log(mabo); -------------------------- -->
+
+			mabo1 = new Gui();
+			console.log(mabo1);
+		});
+	</script>
+
+</body>
+
+</html>
